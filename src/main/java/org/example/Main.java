@@ -1,13 +1,15 @@
 package org.example;
 
-import entities.Tasks;
+import db.Database;
+import entities.menu.Menu;
+import org.hibernate.Session;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        Session session = Database.getHibSesh();
 
+        Menu.chooseAccount();
 
-        Tasks task = new Tasks("Sdfsf","sdff","2041-10-11",false);
-        Tasks.createTasks(task);
 
     }
 }
